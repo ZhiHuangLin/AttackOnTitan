@@ -3,7 +3,6 @@ package com.zhl.attackontitan;
 import com.alibaba.fastjson.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,8 +15,9 @@ public class GetTheHref {
 
     /**
      * 获取樱花动漫网页视频原链接
-     * @param pre_url,number
-     * @return
+     * @param pre_url URL路径前缀
+     * @param number 每一季有多少集
+     * @return 视频路径的集合
      */
     public static synchronized List<String> fromTheURL(String pre_url, int number) {
         String sourceURL;

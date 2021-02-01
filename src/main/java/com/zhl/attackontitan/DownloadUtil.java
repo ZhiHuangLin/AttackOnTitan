@@ -1,15 +1,21 @@
 package com.zhl.attackontitan;
 
-import org.junit.jupiter.api.Test;
-
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-
-public class DownLoadVideo {
-
-    public static boolean httpDownload(String httpUrl,  File file) {
+/**
+ * @author lzh
+ * @time 2021年1月31日
+ */
+public class DownloadUtil {
+    /**
+     * 根据路径下载视频并写入文件
+     * @param httpUrl
+     * @param file
+     * @return
+     */
+    public static boolean httpDownload(String httpUrl, File file) {
         int byteRead;
         URL url;
         try {
@@ -39,10 +45,5 @@ public class DownLoadVideo {
             e.printStackTrace();
             return false;
         }
-    }
-
-    @Test
-    public void httpDownload() {
-        httpDownload("http://1251316161.vod2.myqcloud.com/29fe1275vodbj1251316161/ad937ce75285890810614542059/GizjauzZbrUA.mp4",new File("D:22.mp4"));
     }
 }
